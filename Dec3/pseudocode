@@ -1,0 +1,18 @@
+pseudocode:
+
+.#.#.#....#..........#.........
+
+
+x_cursor = 0
+y_cursor = 0
+while y_cursor <num lines:
+	tree? x_cursor, y_cursor
+	increment step: x_cursor + 3
+					y_cursor + 1
+BUT needs to be:
+					(x_cursor+3) MOD 31
+
+so if we were at the 29, and need to go to the next step,
+it should rollover to the next line and be
+
+29+3 = 32 so the new cursor should be at 1
